@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "image": "food1_image_url",
+        "name": "Spaghetti Carbonara",
+        "quantity": 4,
+        "expired_date_time": "2024-05-12T18:00:00Z",
+        "additional_notes": "Contains dairy products",
+        "view_detail_button": "View Detail",
+        "donator": {
+            "image": "donator1_image_url",
+            "name": "John Doe"
+        },
+        "pickup_location": "123 Main Street, Cityville"
+    },
+    {
+        "id": 2,
+        "image": "food2_image_url",
+        "name": "Vegetable Stir Fry",
+        "quantity": 3,
+        "expired_date_time": "2024-05-13T17:30:00Z",
+        "additional_notes": "Vegan-friendly",
+        "view_detail_button": "View Detail",
+        "donator": {
+            "image": "donator2_image_url",
+            "name": "Jane Smith"
+        },
+        "pickup_location": "456 Oak Avenue, Townsville"
+    },
+    {
+        "id": 3,
+        "image": "food3_image_url",
+        "name": "Chicken Curry",
+        "quantity": 5,
+        "expired_date_time": "2024-05-11T19:00:00Z",
+        "additional_notes": "Spicy, contains peanuts",
+        "view_detail_button": "View Detail",
+        "donator": {
+            "image": "donator3_image_url",
+            "name": "Alice Johnson"
+        },
+        "pickup_location": "789 Elm Street, Villageton"
+    },
+    {
+        "id": 4,
+        "image": "food4_image_url",
+        "name": "Caesar Salad",
+        "quantity": 2,
+        "expired_date_time": "2024-05-14T12:30:00Z",
+        "additional_notes": "Contains anchovies",
+        "view_detail_button": "View Detail",
+        "donator": {
+            "image": "donator4_image_url",
+            "name": "Michael Brown"
+        },
+        "pickup_location": "101 Pine Street, Hamletville"
+    },
+    {
+        "id": 5,
+        "image": "food5_image_url",
+        "name": "Fruit Platter",
+        "quantity": 6,
+        "expired_date_time": "2024-05-15T15:00:00Z",
+        "additional_notes": "Assorted fruits",
+        "view_detail_button": "View Detail",
+        "donator": {
+            "image": "donator5_image_url",
+            "name": "Emily Davis"
+        },
+        "pickup_location": "222 Cedar Lane, Countryside"
+    },
+    {
+        "id": 6,
+        "image": "food6_image_url",
+        "name": "Mushroom Risotto",
+        "quantity": 4,
+        "expired_date_time": "2024-05-16T20:00:00Z",
+        "additional_notes": "Vegetarian, gluten-free",
+        "view_detail_button": "View Detail",
+        "donator": {
+            "image": "donator6_image_url",
+            "name": "Chris Wilson"
+        },
+        "pickup_location": "333 Maple Drive, Suburbia"
+    }
+]
