@@ -1,7 +1,18 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
     const navlinks = <>
 
         <li><NavLink to="/">Home</NavLink></li>
@@ -9,7 +20,7 @@ const Navbar = () => {
         <li><NavLink to="/addFood">Add Food</NavLink></li>
         <li><NavLink to="/manageFood">Manage My Foods</NavLink></li>
         <li><NavLink to="/foodRequest">My Food Request</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
+        {/* <li><NavLink to="/login">Login</NavLink></li> */}
         <li><NavLink to="/signUp">Sign Up</NavLink></li>
 
 
@@ -35,7 +46,21 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user ?
+                            <button onClick={handleSignOut} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-red-600 inline-block">
+                                <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-red-600 group-hover:h-full opacity-90"></span>
+                                <span className="relative group-hover:text-white font-extrabold">Sign Out</span>
+                            </button>
+                            :
+                            <Link to="/login">
+                                <button className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-red-600 inline-block">
+                                    <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-red-600 group-hover:h-full opacity-90"></span>
+                                    <span className="relative group-hover:text-white font-extrabold">Log In</span>
+                                </button>
+                            </Link>
+                    }
+
                 </div>
             </div>
         </div>
