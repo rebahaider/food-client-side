@@ -6,11 +6,10 @@ import Offer from "../Pages/Share/Offer";
 
 const Layout = () => {
     return (
-        <div className="max-w-7xl mx-auto space-y-28">
+        <div className="max-w-7xl mx-auto space-y-20">
             <Navbar></Navbar>
-            <Offer></Offer>
-            
             <Outlet></Outlet>
+            <Offer></Offer>
             <Footer></Footer>
         </div>
     );

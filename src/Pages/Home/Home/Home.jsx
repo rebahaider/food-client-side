@@ -1,5 +1,7 @@
 import Slider from "../Slider";
 import SpecialItems from "../SpecialItems";
+import FeaturedFoods from "./FeaturedFoods";
+
 
 
 const Home = () => {
@@ -7,7 +9,9 @@ const Home = () => {
         <div>
             
             <Slider></Slider>
+            <FeaturedFoods></FeaturedFoods>
             <SpecialItems></SpecialItems>
+            
         </div>
     );
 };

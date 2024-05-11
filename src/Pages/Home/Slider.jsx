@@ -3,7 +3,7 @@ import Carousel from 'react-elastic-carousel'
 const Slider = () => {
     return (
         <div>
-            <h1 className='text-3xl font-serif font-bold text-center mb-6 text-red-800'>Great Tasting Items</h1>
+            <h1 className="text-5xl text-red-800 font-extrabold text-center mb-10">Great Tasting Items</h1>
             <Carousel enableAutoPlay autoPlaySpeed={1500}>
 
                 <img src="https://i.ibb.co/WyzJ2hT/spaghetti-with-mixed-ingredients-white-plate.jpg" alt="" />

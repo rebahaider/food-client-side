@@ -30,7 +30,7 @@ const Navbar = () => {
                     <Link to="/" className="text-2xl text-red-800 font-serif font-extrabold">PETUK</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 gap-3">
                         {navlinks}
                     </ul>
                 </div>

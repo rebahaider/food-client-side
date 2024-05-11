@@ -1,86 +1,68 @@
 [
     {
         "id": 1,
-        "image": "food1_image_url",
+        "image": "https://i.ibb.co/WyzJ2hT/spaghetti-with-mixed-ingredients-white-plate.jpg",
         "name": "Spaghetti Carbonara",
         "quantity": 4,
         "expired_date_time": "2024-05-12T18:00:00Z",
         "additional_notes": "Contains dairy products",
-        "view_detail_button": "View Detail",
-        "donator": {
-            "image": "donator1_image_url",
-            "name": "John Doe"
-        },
+        "donator_image": "https://i.ibb.co/j59nZWd/hand-drawn-charles-dickens-illustration-23-2150940218.jpg",
+        "donator_name": "John Doe",
         "pickup_location": "123 Main Street, Cityville"
     },
     {
         "id": 2,
-        "image": "food2_image_url",
+        "image": "https://i.ibb.co/mctspWp/fried-vegetables-with-sauce-pan.jpg",
         "name": "Vegetable Stir Fry",
         "quantity": 3,
         "expired_date_time": "2024-05-13T17:30:00Z",
         "additional_notes": "Vegan-friendly",
-        "view_detail_button": "View Detail",
-        "donator": {
-            "image": "donator2_image_url",
-            "name": "Jane Smith"
-        },
+        "donator_image": "https://i.ibb.co/S7df06S/hand-drawn-mozart-illustration-52683-149577.jpg",
+        "donator_name": "Jane Smith",
         "pickup_location": "456 Oak Avenue, Townsville"
     },
     {
         "id": 3,
-        "image": "food3_image_url",
+        "image": "https://i.ibb.co/vHNqHVS/curry-with-chicken-onions-indian-food-asian-cuisine-2829-4415.jpg",
         "name": "Chicken Curry",
         "quantity": 5,
         "expired_date_time": "2024-05-11T19:00:00Z",
         "additional_notes": "Spicy, contains peanuts",
-        "view_detail_button": "View Detail",
-        "donator": {
-            "image": "donator3_image_url",
-            "name": "Alice Johnson"
-        },
+        "donator_image": "https://i.ibb.co/5LV2Zg1/watercolor-woman-with-hat-23-2147522928.jpg",
+        "donator_name": "Alice Johnson",
         "pickup_location": "789 Elm Street, Villageton"
     },
     {
         "id": 4,
-        "image": "food4_image_url",
+        "image": "https://i.ibb.co/RzcPdgJ/side-view-caesar-salad-with-chicken-parmesan-cheese-white-bowl-wooden-board-140725-11875.jpg",
         "name": "Caesar Salad",
         "quantity": 2,
         "expired_date_time": "2024-05-14T12:30:00Z",
         "additional_notes": "Contains anchovies",
-        "view_detail_button": "View Detail",
-        "donator": {
-            "image": "donator4_image_url",
-            "name": "Michael Brown"
-        },
+        "donator_image": "https://i.ibb.co/XCMz4S6/hand-drawn-miguel-de-cervantes-illustration-52683-144148.jpg",
+        "donator_name": "Michael Brown",
         "pickup_location": "101 Pine Street, Hamletville"
     },
     {
         "id": 5,
-        "image": "food5_image_url",
+        "image": "https://i.ibb.co/F0kjzBZ/fruit-platter-with-mixed-sliced-fruits-114579-3028.jpg",
         "name": "Fruit Platter",
         "quantity": 6,
         "expired_date_time": "2024-05-15T15:00:00Z",
         "additional_notes": "Assorted fruits",
-        "view_detail_button": "View Detail",
-        "donator": {
-            "image": "donator5_image_url",
-            "name": "Emily Davis"
-        },
+        "donator_image": "https://i.ibb.co/mXRQPrR/hand-drawn-woman-with-floral-detail-illustration-23-2147554890.jpg",
+        "donator_name": "Emily Davis",
         "pickup_location": "222 Cedar Lane, Countryside"
     },
     {
         "id": 6,
-        "image": "food6_image_url",
+        "image": "https://i.ibb.co/Hnc5pGt/vegetarian-risotto-with-fresh-mushrooms-parmesan-cheese-generated-by-ai.jpg",
         "name": "Mushroom Risotto",
         "quantity": 4,
         "expired_date_time": "2024-05-16T20:00:00Z",
         "additional_notes": "Vegetarian, gluten-free",
-        "view_detail_button": "View Detail",
-        "donator": {
-            "image": "donator6_image_url",
-            "name": "Chris Wilson"
-        },
+        "donator_image": "https://i.ibb.co/Sv1fPd5/hand-drawn-miguel-de-cervantes-illustration-52683-144151.jpg",
+        "donator_name": "Chris Wilson",
         "pickup_location": "333 Maple Drive, Suburbia"
     }
 ]
