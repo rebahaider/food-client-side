@@ -1,9 +1,16 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const SignUp = () => {
+
+    // const [signUpError, setSignUpError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const { createUser } = useContext(AuthContext);
 
@@ -17,13 +24,36 @@ const SignUp = () => {
         const user = { name, email, password, photo };
         console.log(user);
 
-        // create user
+        // password validation
+
+        if (password.length < 6) {
+            toast.error("Password should be at least 6 characters or more");
+            return;
+        }
+        else if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,10}$/.test(password)) {
+            toast.error("Your password should be have at least one lower case & one upper case");
+            return;
+        }
+
+        // create user in firebase
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
+                form.reset();
+                navigate("/");
+                toast.success('Successfully Registered'), {
+                    position: "top-center",
+                    theme: "colored"
+                }
             })
             .catch(error => {
                 console.error(error);
+
+                toast.error(error.message), {
+                    position: "top-center",
+                    theme: "colored"
+                }
+
             })
     }
     return (
@@ -40,7 +70,14 @@ const SignUp = () => {
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block text-gray-600">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 hover:border-violet-600" required />
+                    <div className="flex items-center relative">
+                        <input type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 hover:border-violet-600" required />
+                        <span className="absolute right-5" onClick={() => setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                            }
+                        </span>
+                    </div>
 
                 </div>
                 <div className="space-y-1 text-sm">
@@ -48,7 +85,12 @@ const SignUp = () => {
                     <input type="text" name="photo" id="username" placeholder="Photo URL.." className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 hover:border-violet-600" required />
                 </div>
                 <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-violet-600">Sign Up</button>
+
             </form>
+            <ToastContainer
+                position="top-center"
+                theme="colored"
+            ></ToastContainer>
 
             <p className="text-xs text-center sm:px-6 font-bold text-black">Do not have an account?
                 <Link to="/login" rel="noopener noreferrer" href="#" className="underline text-violet-800 font-extrabold">  Login</Link>

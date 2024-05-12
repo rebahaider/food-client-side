@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const Navbar = () => {
@@ -9,8 +10,10 @@ const Navbar = () => {
 
     const handleSignOut = () => {
         logOut()
-            .then()
-            .catch()
+            .then(() => toast.success('User successfully log out'))
+            .catch(error => {
+                toast.error(error)
+            })
     }
 
     const navlinks = <>
@@ -48,10 +51,13 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {
                         user ?
-                            <button onClick={handleSignOut} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-red-600 inline-block">
-                                <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-red-600 group-hover:h-full opacity-90"></span>
-                                <span className="relative group-hover:text-white font-extrabold">Sign Out</span>
-                            </button>
+                            <>
+                                <span className="mr-4">{user.email}</span>
+                                <button onClick={handleSignOut} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-red-600 inline-block">
+                                    <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-red-600 group-hover:h-full opacity-90"></span>
+                                    <span className="relative group-hover:text-white font-extrabold">Sign Out</span>
+                                </button>
+                            </>
                             :
                             <Link to="/login">
                                 <button className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-red-600 inline-block">
