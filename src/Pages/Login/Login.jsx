@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -7,8 +7,10 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
-    const { logIn, logInWithGoogle, logInWithGithub } = useContext(AuthContext)
+    const { logIn, logInWithGoogle, logInWithGithub } = useContext(AuthContext);
+    const location = useLocation();
 
     const handleLogin = event => {
         event.preventDefault();
@@ -22,10 +24,13 @@ const Login = () => {
         logIn(email, password)
             .then(result => {
                 console.log(result);
+                form.reset();
                 toast.success('Successfully Log In'), {
                     position: "top-center",
                     theme: "colored"
                 }
+                navigate(location?.state ? location.state : "/");
+
             })
             .catch(error => {
                 console.error(error);

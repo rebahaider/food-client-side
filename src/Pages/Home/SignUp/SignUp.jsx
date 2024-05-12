@@ -45,6 +45,8 @@ const SignUp = () => {
                     position: "top-center",
                     theme: "colored"
                 }
+
+
             })
             .catch(error => {
                 console.error(error);
