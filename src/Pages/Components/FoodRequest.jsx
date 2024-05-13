@@ -129,7 +129,7 @@ const FoodRequest = () => {
                 <div>
                     <h1 className="text-xl font-bold mb-2">Food Status</h1>
                     <label>
-                        <input type="text" name="food_status" defaultValue="Available" className="input input-bordered input-primary w-1/2" />
+                        <input type="text" name="food_status" defaultValue="Requested" className="input input-bordered input-primary w-1/2" />
                     </label>
                 </div>
 
