@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Slider from "../Slider";
 import SpecialItems from "../SpecialItems";
 import FeaturedFoods from "./FeaturedFoods";
@@ -5,6 +6,12 @@ import FeaturedFoods from "./FeaturedFoods";
 
 
 const Home = () => {
+
+      // set dynamic title
+      useEffect(() => {
+        document.title = "PETUK"
+    })
+
     return (
         <div>
             

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { toast, ToastContainer } from 'react-toastify';
@@ -7,6 +7,11 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const SignUp = () => {
+
+    // set dynamic title
+    useEffect(() => {
+        document.title = "PETUK | SignUp"
+    })
 
     // const [signUpError, setSignUpError] = useState('');
     const [showPassword, setShowPassword] = useState(false);

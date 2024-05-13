@@ -1,10 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+
+    // set dynamic title
+    useEffect(() => {
+        document.title = "PETUK | Login"
+    })
 
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
