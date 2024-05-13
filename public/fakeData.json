@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "image": "https://i.ibb.co/WyzJ2hT/spaghetti-with-mixed-ingredients-white-plate.jpg",
         "name": "Spaghetti Carbonara",
         "quantity": 4,
@@ -11,7 +10,6 @@
         "pickup_location": "123 Main Street, Cityville"
     },
     {
-        "id": 2,
         "image": "https://i.ibb.co/mctspWp/fried-vegetables-with-sauce-pan.jpg",
         "name": "Vegetable Stir Fry",
         "quantity": 3,
@@ -22,7 +20,6 @@
         "pickup_location": "456 Oak Avenue, Townsville"
     },
     {
-        "id": 3,
         "image": "https://i.ibb.co/vHNqHVS/curry-with-chicken-onions-indian-food-asian-cuisine-2829-4415.jpg",
         "name": "Chicken Curry",
         "quantity": 5,
@@ -33,7 +30,6 @@
         "pickup_location": "789 Elm Street, Villageton"
     },
     {
-        "id": 4,
         "image": "https://i.ibb.co/RzcPdgJ/side-view-caesar-salad-with-chicken-parmesan-cheese-white-bowl-wooden-board-140725-11875.jpg",
         "name": "Caesar Salad",
         "quantity": 2,
@@ -44,7 +40,6 @@
         "pickup_location": "101 Pine Street, Hamletville"
     },
     {
-        "id": 5,
         "image": "https://i.ibb.co/F0kjzBZ/fruit-platter-with-mixed-sliced-fruits-114579-3028.jpg",
         "name": "Fruit Platter",
         "quantity": 6,
@@ -55,7 +50,6 @@
         "pickup_location": "222 Cedar Lane, Countryside"
     },
     {
-        "id": 6,
         "image": "https://i.ibb.co/Hnc5pGt/vegetarian-risotto-with-fresh-mushrooms-parmesan-cheese-generated-by-ai.jpg",
         "name": "Mushroom Risotto",
         "quantity": 4,
