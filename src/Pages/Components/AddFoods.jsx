@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 
 const AddFoods = () => {
@@ -139,6 +139,7 @@ const AddFoods = () => {
                     </label>
                 </div>
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
