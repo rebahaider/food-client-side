@@ -1,5 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Model from 'react-modal';
 import { Link, useLoaderData } from "react-router-dom";
+import FoodRequest from "./FoodRequest";
 
 const SinglePageDetails = () => {
 
@@ -7,6 +9,10 @@ const SinglePageDetails = () => {
     useEffect(() => {
         document.title = "PETUK | SinglePageDetails"
     })
+
+    // model state
+
+    const [model, setModel] = useState(false);
 
     const item = useLoaderData();
     const { image, name, quantity, expired_date_time, donator_name, pickup_location } = item;
@@ -39,11 +45,22 @@ const SinglePageDetails = () => {
 
                             <p className="text-lg sm:mb-12 font-bold">Expired Date/Time:<span className="text-violet-600">{expired_date_time}</span> </p>
 
+                            {/* modal */}
                             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                                <button className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-red-600 inline-block">
+                                <button onClick={() => setModel(true)} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-red-600 inline-block">
                                     <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-red-600 group-hover:h-full opacity-90"></span>
-                                    <Link><span className="relative group-hover:text-white font-extrabold">Request</span></Link>
+                                    <Link><span className="relative group-hover:text-white font-extrabold ">Request</span></Link>
+
                                 </button>
+                                <Model isOpen={model}>
+                                    <FoodRequest></FoodRequest>
+                                    <button onClick={() => setModel(false)} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-red-600 inline-block ">
+                                        <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-red-600 group-hover:h-full opacity-90"></span>
+                                        <Link><span className="relative group-hover:text-white font-extrabold ">Close Model</span></Link>
+
+                                    </button>
+                                </Model>
+
                             </div>
                         </div>
                     </div>

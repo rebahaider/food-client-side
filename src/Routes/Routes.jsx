@@ -9,6 +9,7 @@ import AddFoods from "../Pages/Components/AddFoods";
 import ManageMyFoods from "../Pages/Components/ManageMyFoods";
 import MyFoodRequest from "../Pages/Components/MyFoodRequest";
 import SinglePageDetails from "../Pages/Components/SinglePageDetails";
+import FoodRequest from "../Pages/Components/FoodRequest";
 
 const router = createBrowserRouter([
     {
@@ -46,7 +47,12 @@ const router = createBrowserRouter([
             {
                 path: "/singlePage/:id",
                 element: <SinglePageDetails></SinglePageDetails>,
-                loader: ({params})=> fetch(`http://localhost:5000/foodItems/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/foodItems/${params.id}`)
+            },
+            {
+                path: "/foodRequest/:id",
+                element: <FoodRequest></FoodRequest>,
+                loader: ({ params }) => fetch(`http://localhost:5000/foodItems/${params.id}`)
             }
         ]
     },
