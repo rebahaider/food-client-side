@@ -16,7 +16,7 @@ const ManageMyFoods = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        fetch(`https://food-server-side-e4dyfad2l-reba-haiders-projects.vercel.app/requestFoodItems?email=${user?.email}`)
+        fetch(`https://food-server-side.vercel.app/requestFoodItems?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setRequestedFoods(data));
     }, []);
@@ -25,7 +25,7 @@ const ManageMyFoods = () => {
     const handleDelete = id => {
         const proceed = toast.warn('Are you sure you want to delete this items');
         if (proceed) {
-            fetch(`https://food-server-side-e4dyfad2l-reba-haiders-projects.vercel.app/requestFoodItems/${id}`, {
+            fetch(`https://food-server-side.vercel.app/requestFoodItems/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

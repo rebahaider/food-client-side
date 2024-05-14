@@ -12,7 +12,7 @@ const MyFoodRequest = () => {
     const [requestedFoods, setRequestedFoods] = useState([]);
 
     useEffect(() => {
-        fetch('https://food-server-side-e4dyfad2l-reba-haiders-projects.vercel.app/requestFoodItems')
+        fetch('https://food-server-side.vercel.app/requestFoodItems')
             .then(res => res.json())
             .then(data => setRequestedFoods(data));
     }, [])
