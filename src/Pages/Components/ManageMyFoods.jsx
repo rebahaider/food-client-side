@@ -20,6 +20,8 @@ const ManageMyFoods = () => {
             .then(res => res.json())
             .then(data => setRequestedFoods(data));
     }, []);
+
+    // delete 
     const handleDelete = id => {
         const proceed = toast.warn('Are you sure you want to delete this items');
         if (proceed) {
@@ -37,6 +39,8 @@ const ManageMyFoods = () => {
                 })
         }
     }
+
+    
 
     return (
         <div>
@@ -58,7 +62,7 @@ const ManageMyFoods = () => {
                     </thead>
                     <tbody>
                         {
-                            requestedFoods.map(food => <RequestedFoodRow key={food.id} food={food} handleDelete={handleDelete}></RequestedFoodRow>)
+                            requestedFoods.map(food => <RequestedFoodRow key={food.id} food={food} handleDelete={handleDelete} ></RequestedFoodRow>)
                         }
 
                     </tbody>
