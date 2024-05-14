@@ -1,8 +1,14 @@
-# React + Vite
+# Petuk 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [ Client Side Private Repo Link](https://github.com/Porgramming-Hero-web-course/b9a11-client-side-rebahaider)
 
-Currently, two official plugins are available:
+## [ Server Side Private Repo Link](https://github.com/Porgramming-Hero-web-course/b9a11-server-side-rebahaider)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## [ Live Site Link] (https://food-client-site.web.app/)
+
+#Features
+1. User can Sign Up/Log In
+2. User can Log In using GitHub & Google Account
+3. User can Request/Order food
+4. User can add his/her favourite food items
+5. User can update & delete his/her requested food items
