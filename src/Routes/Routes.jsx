@@ -48,17 +48,17 @@ const router = createBrowserRouter([
             {
                 path: "/singlePage/:id",
                 element: <SinglePageDetails></SinglePageDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/foodItems/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-server-side-e4dyfad2l-reba-haiders-projects.vercel.app/foodItems/${params.id}`)
             },
             {
                 path: "/foodRequest/:id",
                 element: <FoodRequest></FoodRequest>,
-                loader: ({ params }) => fetch(`http://localhost:5000/foodItems/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-server-side-e4dyfad2l-reba-haiders-projects.vercel.app/foodItems/${params.id}`)
             },
             {
                 path: "/updateFood/:id",
                 element: <UpdateFood></UpdateFood>,
-                loader: ({ params }) => fetch(`http://localhost:5000/requestFoodItems/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-server-side-e4dyfad2l-reba-haiders-projects.vercel.app/requestFoodItems/${params.id}`)
             }
         ]
     },

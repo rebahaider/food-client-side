@@ -49,7 +49,7 @@ const Navbar = () => {
                             {navlinks}
                         </ul>
                     </div>
-                    <img src="/public/images.jpeg" className="w-20 h-20 rounded-full border-4 border-rose-600 mr-2" alt="" />
+                    <img src="https://i.ibb.co/kQXtvgP/images.jpg" className="w-20 h-20 rounded-full border-4 border-rose-600 mr-2" alt="" />
                     <Link to="/" className="text-2xl text-red-800 font-serif font-extrabold">PETUK</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -75,7 +75,7 @@ const Navbar = () => {
                                 </button>
                             </Link>
                     }
-                    
+
                 </div>
             </div>
             <ToastContainer></ToastContainer>

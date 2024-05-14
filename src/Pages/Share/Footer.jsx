@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="lg:w-1/3">
                         <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
                             <div className="flex items-center justify-center w-40 h-40 rounded-full dark:bg-violet-600">
-                                <img className="rounded-full border-4 border-rose-600" src="/public/images.jpeg" alt="" />
+                                <img className="rounded-full border-4 border-rose-600" src="https://i.ibb.co/kQXtvgP/images.jpg" alt="" />
                             </div>
                             <span className="self-center text-2xl text-red-800 font-serif font-extrabold">PETUK</span>
                         </a>

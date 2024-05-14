@@ -35,7 +35,7 @@ const FoodRequest = () => {
         console.log(newFood);
 
         // fetch server site
-        fetch('http://localhost:5000/requestFoodItems', {
+        fetch('https://food-server-side-e4dyfad2l-reba-haiders-projects.vercel.app/requestFoodItems', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
