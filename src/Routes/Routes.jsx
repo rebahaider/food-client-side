@@ -47,17 +47,17 @@ const router = createBrowserRouter([
             },
             {
                 path: "/singlePage/:id",
-                element: <SinglePageDetails></SinglePageDetails>,
+                element: <PrivateRoute><SinglePageDetails></SinglePageDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://food-server-side.vercel.app/foodItems/${params.id}`)
             },
             {
                 path: "/foodRequest/:id",
-                element: <FoodRequest></FoodRequest>,
+                element: <PrivateRoute><FoodRequest></FoodRequest></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://food-server-side.vercel.app/foodItems/${params.id}`)
             },
             {
                 path: "/updateFood/:id",
-                element: <UpdateFood></UpdateFood>,
+                element: <PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://food-server-side.vercel.app/requestFoodItems/${params.id}`)
             }
         ]
