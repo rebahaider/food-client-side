@@ -61,10 +61,6 @@ const router = createBrowserRouter([
                 path: "/updateFood/:id",
                 element: <PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://food-server-side.vercel.app/requestFoodItems/${params.id}`)
-            },
-            {
-                path: "/errorPage",
-                element: <ErrorPage></ErrorPage>
             }
         ]
     },

@@ -2,8 +2,8 @@
 
 const ErrorPage = () => {
     return (
-        <div className="text-center">
-            <img className="text-center" src="https://i.ibb.co/PGqX362/Frame.png" alt="" />
+        <div className="mt-10">
+            <img className="mx-auto" src="https://i.ibb.co/PGqX362/Frame.png" alt="" />
         </div>
     );
 };
