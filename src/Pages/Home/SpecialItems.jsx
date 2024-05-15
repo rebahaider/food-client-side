@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const SpecialItems = () => {
@@ -23,8 +24,8 @@ const SpecialItems = () => {
                     <h1 className="text-2xl font-bold text-red-800">7+ Varieties</h1>
                 </div>
                 <div className="bg-base-300 rounded-3xl mx-auto p-6 space-y-4">
-                    <img className="w-60 h-60 rounded-full" src="https://i.ibb.co/BK1T3DN/delicious-coffee-beans-cup-23-2150691429.jpg" alt="" />
-                    <h1 className="text-2xl font-bold text-red-800">Coffee</h1>
+                    <Link to="/errorPage"><img className="w-60 h-60 rounded-full" src="https://i.ibb.co/BK1T3DN/delicious-coffee-beans-cup-23-2150691429.jpg" alt="" /></Link>
+                    <Link to="/errorPage"><h1 className="text-2xl font-bold text-red-800">Coffee</h1></Link>
                     <h1 className="text-2xl font-bold text-red-800">5+ Varieties</h1>
                 </div>
             </div>

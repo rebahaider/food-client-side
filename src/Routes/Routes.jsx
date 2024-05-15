@@ -11,11 +11,13 @@ import MyFoodRequest from "../Pages/Components/MyFoodRequest";
 import SinglePageDetails from "../Pages/Components/SinglePageDetails";
 import FoodRequest from "../Pages/Components/FoodRequest";
 import UpdateFood from "../Pages/Components/UpdateFood";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout></Layout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -59,6 +61,10 @@ const router = createBrowserRouter([
                 path: "/updateFood/:id",
                 element: <PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://food-server-side.vercel.app/requestFoodItems/${params.id}`)
+            },
+            {
+                path: "/errorPage",
+                element: <ErrorPage></ErrorPage>
             }
         ]
     },
